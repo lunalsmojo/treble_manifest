@@ -8,6 +8,9 @@
   
   <default remote="aosp" revision="refs/tags/android-12.1.0_r5" sync-j="4"/>
   
+  <superproject name="platform/superproject" revision="android-12.1.0_r5"/>
+  <contactinfo bugurl="go/repo-bug"/>
+  
   <project name="device/amlogic/yukawa" revision="aac192379863f63453f775db8968207c351fc0d0" upstream="refs/tags/android-12.1.0_r5" dest-branch="refs/tags/android-12.1.0_r5" groups="device,yukawa,pdk"/>
   <project name="device/amlogic/yukawa-kernel" revision="824c867a84d9c67297d9475d4a613702f40a1b75" upstream="refs/tags/android-12.1.0_r5" dest-branch="refs/tags/android-12.1.0_r5" groups="device,yukawa,pdk" clone-depth="2"/>
   <project name="device/common" revision="bf7f271e7c4cd359fd8eb7b10e0f04a94e6e6400" upstream="refs/tags/android-12.1.0_r5" dest-branch="refs/tags/android-12.1.0_r5" groups="pdk-cw-fs,pdk"/>
@@ -1102,9 +1105,6 @@
   <project name="vendor_magisk" path="vendor/magisk" remote="phh" revision="d8056f8032a0f60f365ddfe5e9fccd7eaf3a655d" upstream="android-10.0" dest-branch="android-10.0" groups="local::manifest"/>
   <project name="vendor_vndk-tests" path="vendor/vndk-tests" remote="phh" revision="5531c9f077f391ba1c9ea9652a172a86d2f6e34b" upstream="master" dest-branch="master" groups="local::manifest"/>
   
+  <include name="custom/extras.xml" />
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload"/>
-  
-  <superproject name="platform/superproject" revision="android-12.1.0_r5"/>
-  
-  <contactinfo bugurl="go/repo-bug"/>
 </manifest>
